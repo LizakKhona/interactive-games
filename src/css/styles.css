@@ -43,7 +43,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+
+*,
+*::after,
+*::before{
   box-sizing: border-box;
 }
 .container {
