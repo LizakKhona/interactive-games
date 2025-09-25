@@ -1,0 +1,40 @@
+/* .football-section {
+
+} */
+
+.football-title {
+    margin-bottom: 36px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: center;
+}
+.football-title::before {
+    content: "";
+    display: block;
+    width: 536px;
+    height: 1px;
+    margin: 0 auto 36px;
+    background-color: var(--primary-color);
+}
+.football-field {
+    width: 720px;
+    height: 220px;
+    margin: 0 auto;
+    background-color: var(--seventh-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 37px;
+}
+.football-field::after {
+    content: "";
+    display: block;
+    width: 536px;
+    height: 1px;
+    margin: 756px auto 0;
+    background-color: var(--primary-color);
+}
+.football-ball{
+     width: 50px;
+     height: 50px;
+}
