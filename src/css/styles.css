@@ -8,6 +8,8 @@
 /* @import url('./vite-promo.css'); */
 @import url('./football.css');
 
+@import url('./time-calc.css');
+
 :root {
   /* fonts */
   --font-family: "Montserrat Alternates", sans-serif;
