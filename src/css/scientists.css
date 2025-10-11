@@ -1,0 +1,90 @@
+.scientists-section{
+    width: 1090px;
+    margin: 0 auto;
+}
+.scientists-list{
+    width: 577px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 59px;
+    row-gap: 36px;
+    margin: 0 auto 36px;
+}
+.scientists-item {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--fourth-color);
+}
+.scientists-thumb {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.scientists-name {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    left: 50%;
+    top: 69px;
+    transform: translateX(-50%);
+    line-height: 1;
+    background-color:bisque;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+#Sarah-Goode .scientists-name{
+    width: 57px
+}
+.scientists-img{
+    position: absolute;
+    z-index: 1;
+}
+.scientists-thumb{
+    width: 100px;
+    height: 100px;
+    transform: translateY(100%);
+    transition: transform 300ms ease-in;
+}
+.scientists-thumb-chosen {
+    position: absolute;
+    transform: translateY(0);
+}
+.scientists-information {
+    width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 36px;
+    row-gap: 20px;
+}
+.scientists-element:not(:last-child){
+    flex-basis: 45%;
+}
+.scientists-element:nth-child(odd)  .scientists-button {
+    display: block;
+    margin-left: auto;
+}
+.scientists-element:nth-child(even)  .scientists-button {
+    text-align: start;
+}
+.scientists-element:nth-child(8) {
+    line-height: 1.3;
+}
+.scientists-button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    border-radius: 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+}

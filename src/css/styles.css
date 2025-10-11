@@ -7,6 +7,7 @@
 @import url('./reset.css');
 /* @import url('./vite-promo.css'); */
 @import url('./football.css');
+@import url('./scientists.css');
 
 :root {
   /* fonts */
@@ -55,4 +56,26 @@
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
+}
+
+/* typography */
+.title {
+    margin-bottom: 36px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: center;
+}
+.title::before {
+  content: "";
+    display: block;
+    width: 536px;
+    height: 1px;
+    margin: 0 auto 36px;
+    background-color: var(--primary-color);
+}
+section {
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
