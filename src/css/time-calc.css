@@ -8,14 +8,14 @@
   margin-bottom: 1.5rem;
 }
 
-.time__box {
+.time-box {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.time__input {
+.time-input {
   background: #d9d9d9;
   border: none;
   border-radius: 999px 0 0 999px;
@@ -25,7 +25,7 @@
   box-shadow: 4px 4px #00000040;
 }
 
-.time__btn {
+.time-btn {
   width: 50px;
   height: 45px;
   border-radius: 0 50% 50% 0;
@@ -41,7 +41,7 @@
 }
 
 
-.time__result {
+.time-result {
     font-size: 1rem;
     color: #000;
     margin-left: 33px; }
