@@ -50,7 +50,7 @@ ground.classList.add("game-ground");
 gameContainer.appendChild(ground);
 
 Object.assign(ground.style, {
-  width: "1098px", // трохи менша, щоб виглядало природніше
+  width: "1098px", 
   height: "20px",
   background: "url('img/ground.png') repeat-x",
   position: "absolute",
@@ -74,7 +74,7 @@ Object.assign(dino.style, {
   bottom: "20px",
   width: "40px",
   height: "40px",
-  backgroundImage: "url('img/dino.jpg')",
+  backgroundImage: "url('img/dino-s.jpg')",
   backgroundSize: "cover",
   zIndex: "2"
 });
