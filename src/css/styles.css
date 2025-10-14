@@ -10,6 +10,8 @@
 @import url('./scientists.css');
 @import url('./dino.css');
 
+@import url('./year.css');
+
 :root {
   /* fonts */
   --font-family: "Montserrat Alternates", sans-serif;
