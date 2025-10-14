@@ -5,9 +5,9 @@ const containerElem = document.querySelector('.js-container');
 // створення елементів
 
 // p
-const titleElem = document.createElement('p');
+const titleElem = document.createElement('h2');
 titleElem.textContent = 'Футбол';
-titleElem.classList.add("football-title")
+titleElem.classList.add("title")
 
 // div
 const fieldElem = document.createElement("div");
@@ -26,13 +26,16 @@ fieldElem.append(ballElem)
 
 footballSectionElem.classList.add("football-section");
 
-// fieldElem.addEventListener("click", onFieldClick)
-// function onFieldClick(event) {
-//     // const clientX = event.clientX;
-//     // const clientY = event.clientY;
-//     // event.target.clientX === clientX;
-//     // ballElem.target.clientX === clientY;
-//     console.log(event);
-    
-    
-// }
+let animationName = "ball-moving"
+fieldElem.addEventListener("click", onFieldClick)
+function onFieldClick(event) {
+
+    if (animationName !== 'ball-moving') {
+        animationName === 'ball-moving'
+    } else if (animationName === 'ball-moving') {
+        animationName === 'ball-moving2';
+    }
+    ballElem.style.top = `${event.offsetY}px`
+    ballElem.style.left = `${event.offsetX}px`
+    ballElem.style.animationName = `${animationName}`
+}
