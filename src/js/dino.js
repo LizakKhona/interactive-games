@@ -255,7 +255,7 @@ document.addEventListener("keydown", (e) => {
   const isTyping = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
 
   if (e.code === "Space" && !isTyping) {
-    e.preventDefault(); // <-- предотвращаем прокрутку страницы
+    e.preventDefault(); 
     if (!isJumping && !gameOver) {
       isJumping = true;
       velocity = 14;
