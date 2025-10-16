@@ -244,3 +244,23 @@ document.body.appendChild(bottomLine);
 // =============================
 createCactus();
 gameLoop();
+
+
+// =============================
+// БЛОК СВАЙПУ ВНИЗ
+// =============================
+
+document.addEventListener("keydown", (e) => {
+  const target = e.target;
+  const isTyping = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
+
+  if (e.code === "Space" && !isTyping) {
+    e.preventDefault(); // <-- предотвращаем прокрутку страницы
+    if (!isJumping && !gameOver) {
+      isJumping = true;
+      velocity = 14;
+    } else if (gameOver) {
+      window.location.reload();
+    }
+  }
+});
