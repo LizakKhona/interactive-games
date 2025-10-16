@@ -12,6 +12,8 @@
 
 @import url('./year.css');
 
+@import url('./time-calc.css');
+
 :root {
   /* fonts */
   --font-family: "Montserrat Alternates", sans-serif;
