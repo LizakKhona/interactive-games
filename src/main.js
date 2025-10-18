@@ -1,4 +1,5 @@
 import "./js/time-cacl";
+import "./js/math-calculator";
 import './js/year';
 import './js/guess-the-number';
 import "./js/dino";
