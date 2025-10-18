@@ -5,4 +5,5 @@ import './js/guess-the-number';
 import "./js/dino";
 import "./js/football";
 import "./js/largest-num";
-import "./js/scientists"
+import "./js/scientists";
+import "./js/footer";
