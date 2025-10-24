@@ -1,0 +1,110 @@
+.slider-title {
+    margin-bottom: 36px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: center;
+}
+.slider-title::before {
+  content: "";
+    display: block;
+    width: 536px;
+    height: 1px;
+    margin: 0 auto 36px;
+    background-color: var(--primary-color);
+}
+section {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.slider-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+
+.slider-btn{
+position: absolute;
+background: none;
+border: 0;
+width: 50px;
+height: 100px;
+cursor:pointer;
+
+}
+
+.slider-btn-l{
+left: 243px;
+
+}
+
+.slider-btn-r{
+right: 243px;
+
+}
+
+
+.slider-div{
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-slide{
+text-align: center;
+}
+
+
+.slider-img{
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: #D9D9D9;
+  margin:0 auto 12px;
+}
+
+
+.slider-subtitle{
+  margin-top: 20px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+
+.slider-text{
+  font-size:14px;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+}
+
+
+.slider-div-line{
+position: absolute;
+top: 265px;
+}
+
+.slider-line{
+display: flex;
+justify-content: center;
+gap: 6px;
+}
+
+.dot{
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  background-color: var(--fourth-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.dot.active{
+  background-color: var(--ninth-color);
+  width: 30px;
+}
