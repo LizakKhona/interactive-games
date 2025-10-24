@@ -14,6 +14,8 @@
 
 @import url('./time-calc.css');
 
+@import url('./slider.css');
+
 :root {
   /* fonts */
   --font-family: "Montserrat Alternates", sans-serif;
