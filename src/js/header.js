@@ -69,13 +69,15 @@ function createHeader(userName) {
 
   themeToggle.addEventListener('click', () => {
     header.classList.toggle('dark');
+    // body.style.backgroundColor = 'grey';
     const circle = themeToggle.querySelector('.circle');
     if (header.classList.contains('dark')) {
       circle.style.transform = 'translateX(26px)';
       circle.style.backgroundColor = 'black';
       localStorage.setItem('theme', 'dark');
       greet.style.color = 'white';
-      logoDiv.style.backgroundColor = 'white';
+      // logoDiv.style.backgroundColor = 'white';
+      // body.style.backgroundColor = "grey"
       sections.forEach(section => (section.style.backgroundColor = 'grey'));
       footer.style.backgroundColor = 'grey';
 
@@ -91,8 +93,9 @@ function createHeader(userName) {
       circle.style.backgroundColor = 'white';
       localStorage.setItem('theme', 'light');
       greet.style.color = 'black';
-      logoDiv.style.backgroundColor = 'white';
+      // logoDiv.style.backgroundColor = 'white';
       sections.forEach(section => (section.style.backgroundColor = 'white'));
+      // body.style.backgroundColor = 'white';
       footer.style.backgroundColor = 'white';
 
       const htmlElements = ['p', 'output', 'h1', 'h2', 'h3', 'li', 'a'];
@@ -112,6 +115,7 @@ function createHeader(userName) {
       items.forEach(item => item.classList.remove('dark-theme-font'));
     }
   });
+
 
   // ПРИВЕТСТВИЕ
   const box1 = document.createElement('div');

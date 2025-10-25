@@ -5,8 +5,8 @@
 .dark {
   --bg: #181818;
   --text: #fff;
-  --header-bg: #202020;
-  background-color: var(--header-bg);
+  --header-bg: gray;
+  background-color: gray;
 }
 
 header {
@@ -136,7 +136,7 @@ nav button:nth-child(1) {
   display: none;
   position: absolute;
   top: 100%;
-  left: 465px;
+  left: 384px;
   background-color: var(--header-bg);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   overflow: hidden;
@@ -155,7 +155,7 @@ border-radius: 0 0 20px 20px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
-  color: var(--primary-color);
+  color: black;
   display: block;
   width: 160px;
   text-align: center;

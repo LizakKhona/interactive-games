@@ -107,8 +107,7 @@ let speed = 6;
 // =============================
 document.addEventListener("keydown", (e) => {
 const target = e.target;
-const isTyping =
-target &&
+const isTyping = target &&
 (target.tagName === "INPUT" ||
 target.tagName === "TEXTAREA" ||
 target.isContentEditable);

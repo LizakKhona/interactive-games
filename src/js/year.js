@@ -4,10 +4,10 @@
 const wrap = document.querySelector('.js-year');
 
 
- const title = document.createElement('h1');
+ const title = document.createElement('h2');
 title.textContent = 'Перевір в який рік ти народися';
 title.classList.add('year-title');
-wrap.prepend(title)
+wrap.append(title)
 
 const input = document.createElement('input');
 input.classList.add('input__center__section1');
