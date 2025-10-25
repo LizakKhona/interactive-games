@@ -1,11 +1,19 @@
 .time {
   text-align: center;
 }
-
+.time::before {
+  content: "";
+  width: 536px;
+  height: 1px;
+  background-color: black;
+  display: block;
+  margin: 0 auto 36px;
+}
 .time__title {
   font-size: 1.3rem;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 36px;
+
 }
 
 .time-box {

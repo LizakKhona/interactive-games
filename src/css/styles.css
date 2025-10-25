@@ -59,6 +59,19 @@
 *::before{
   box-sizing: border-box;
 }
+body {
+  width: 1440px;
+    margin: 0 auto;
+    background-image: url("../img/body-bgc.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section{
+  background-color: white;
+  width: 1090px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 .container {
   width: 1090px;
   padding-left: 10px;
@@ -84,6 +97,6 @@
     background-color: var(--primary-color);
 }
 section {
-  padding-top: 36px;
+  padding-top: 36px; 
   padding-bottom: 36px;
-}
+} 

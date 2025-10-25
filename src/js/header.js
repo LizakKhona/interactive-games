@@ -1,26 +1,34 @@
 // === ФУНКЦИЯ СОЗДАНИЯ ХЕДЕРА ===
 function createHeader(userName) {
   const header = document.createElement("header");
-
+  // document.body.prepend(header)
+  const container = document.createElement("div")
+  container.classList.add("container")
+  container.classList.add('header-container');
+  header.appendChild(container)
   // ЛОГО
   const logoDiv = document.createElement("div");
   logoDiv.classList.add("logo");
-  logoDiv.innerHTML = `<img src="./icons/full-logo.svg" alt="Logo">`;
-  header.appendChild(logoDiv);
+  logoDiv.innerHTML = `<svg height="73" width="175">
+    <use href="./icons/logo-footer.svg"></use>
+   </svg>`;
+  // container.appendChild(logoDiv);
 
   // НАВИГАЦИЯ
   const nav = document.createElement("nav");
 
   const interactiveBtn = document.createElement("button");
-  interactiveBtn.innerHTML = `Інтерактив <img src="./icons/dropdown.svg" alt="▼">`;
+  interactiveBtn.innerHTML = `Інтерактив <img class="arrow-header" height="9" width="5" src="./img/arrow.jpg">
+   </img>`;
 
   const dropdown = document.createElement("div");
   dropdown.classList.add("dropdown");
   dropdown.innerHTML = `
-    <button>Числовий</button>
-    <button>Ігровий</button>
-    <button>Ознайомчий</button>
+    <button class="dropdown-button">Числовий</button>
+    <button class="dropdown-button">Ігровий</button>
+    <button class="dropdown-button">Ознайомчий</button>
   `;
+  const dropdownButtons = dropdown.querySelectorAll('.dropdown-button');
   interactiveBtn.appendChild(dropdown);
   interactiveBtn.addEventListener("click", () => {
     dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
@@ -48,27 +56,79 @@ function createHeader(userName) {
 
   // Проверяем сохранённую тему
   if(localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
+    header.classList.add("dark");
     themeToggle.querySelector(".circle").style.transform = "translateX(26px)";
   }
+  
+
+    const greet = document.createElement('div');
+    greet.classList.add('greet');
+  greet.textContent = `Вітаємо, ${userName}!`;
+  const sections = document.querySelectorAll("section")
+  const footer = document.querySelector("footer")
+  
 
   themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
+    header.classList.toggle("dark");
     const circle = themeToggle.querySelector(".circle");
-    if(document.body.classList.contains("dark")) {
+    if(header.classList.contains("dark")) {
       circle.style.transform = "translateX(26px)";
+      circle.style.backgroundColor = "black"
       localStorage.setItem("theme", "dark");
+      greet.style.color = "white"
+      logoDiv.style.backgroundColor = "white"
+      sections.forEach(section => (section.style.backgroundColor = 'grey'));
+      footer.style.backgroundColor = 'grey';
+      
+      const htmlElements = ['p', 'output', 'h1', 'h2', 'h3', 'li', "a"];
+      htmlElements.map(elem => {
+        const items = document.querySelectorAll(elem);
+        addClass(items)
+
+        // dropdownButtons.forEach(button => button.style.color = "lighgray");
+      });
     } else {
       circle.style.transform = "translateX(0)";
+      circle.style.backgroundColor = 'white';
       localStorage.setItem("theme", "light");
+      greet.style.color = 'black';
+      logoDiv.style.backgroundColor = 'white';
+      sections.forEach(section => section.style.backgroundColor = 'white');
+      footer.style.backgroundColor = 'white';
+
+      const htmlElements = ['p', 'output', 'h1', 'h2', 'h3', 'li', 'a'];
+      htmlElements.map(elem => {
+        const items = document.querySelectorAll(elem);
+        removeClass(items)
+      });
+      
+      // dropdownButtons.forEach(button => button.style.color = "black");
     }
+
+    function addClass(items) {
+      items.forEach(item => item.classList.add('dark-theme-font'));
+    }
+
+    function removeClass(items) {
+      items.forEach(item => item.classList.remove('dark-theme-font'));
+    }
+
+    
   });
 
   // ПРИВЕТСТВИЕ
-  const greet = document.createElement("div");
-  greet.textContent = `Вітаємо, ${userName}!`;
 
-  header.append(nav, themeToggle, greet);
+
+
+  const box1 = document.createElement("div")
+   box1.classList.add('box1');
+  box1.append(logoDiv, nav);
+  
+  const box2 = document.createElement("div")
+  box2.classList.add('box2');
+  box2.append(themeToggle, greet)
+  container.append(box1, box2)
+  // container.append(nav, themeToggle, greet);
   document.body.prepend(header);
 }
 
@@ -84,12 +144,12 @@ function showWelcome() {
     <button class="close-btn">
       <img src="./icons/x.svg" alt="x" class="header-x">
     </button>
-    <h2 class="modal-title">Привіт!<br>
+    <p class="modal-title">Привіт!<br>
 Ви потрапили на сайт інтерактивних ігор та завдань<br>
 Надіємось, що вам сподобається і ви отримаєте позитивні емоції!<br>
-Бажаємо Вам гарно провести час!</h2>
+Бажаємо Вам гарно провести час!</p>
     <p class="modal-text">Введіть своє ім’я:</p>
-    <input type="text" id="userNameInput" placeholder="Ваше ім’я...">
+    <input type="text" id="userNameInput" placeholder="Ваше ім’я..." class="modal-input">
     <button id="saveName">Зберегти</button>
     <img src="./icons/sword.svg" alt="sword" class="modal-icon-lt">
     <img src="./icons/puzzle.svg" alt="puzzle" class="modal-icon-lb">
