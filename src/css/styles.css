@@ -6,6 +6,7 @@
 */
 @import url('./reset.css');
 /* @import url('./vite-promo.css'); */
+@import url('./header.css');
 @import url('./football.css');
 @import url('./largest-num.css');
 @import url('./scientists.css');
@@ -32,9 +33,9 @@
   --fifth-color: #D7D7D7;
   --sixth-color: #039900;
   --seventh-color: #5ABB58;
-  --eighth-color: #6F6F6F;
+  --eighth-color: #6f6f6f;
   --ninth-color: #797979;
-  --tenth-color: #7A7A7A;
+  --tenth-color: #7a7a7a;
   --eleventh-color: #BDBDBD;
 
 
@@ -59,6 +60,19 @@
 *::after,
 *::before{
   box-sizing: border-box;
+}
+body {
+  width: 1440px;
+    margin: 0 auto;
+    background-image: url("../img/body-bgc.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section{
+  background-color: white;
+  width: 1090px !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container {
   width: 1090px;
@@ -85,6 +99,6 @@
     background-color: var(--primary-color);
 }
 section {
-  padding-top: 36px;
+  padding-top: 36px; 
   padding-bottom: 36px;
-}
+} 
