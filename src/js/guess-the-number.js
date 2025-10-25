@@ -1,6 +1,7 @@
+const guessNumSection = document.querySelector('.guess-number');
 const container = document.createElement('div');
-container.className = 'game-container';
-
+container.className = 'container';
+guessNumSection.append(container)
 const title = document.createElement('h2');
 title.className = 'game-title';
 title.textContent = 'Вгадай число, яке загадав комп’ютер';
@@ -31,7 +32,7 @@ row.appendChild(result);
 // Добавляем всё в основной контейнер
 container.appendChild(title);
 container.appendChild(row);
-document.body.appendChild(container);
+// document.body.appendChild(container);
 
 // Логика игры
 const secretNumber = Math.floor(Math.random() * 10) + 1;

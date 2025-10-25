@@ -21,7 +21,7 @@ display: "flex",
 flexDirection: "column",
 alignItems: "center",
 justifyContent: "center",
-height: "100vh",
+// height: "100vh",
 fontFamily: "var(--font-family)"
 });
 

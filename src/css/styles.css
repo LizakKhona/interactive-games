@@ -6,6 +6,7 @@
 */
 @import url('./reset.css');
 /* @import url('./vite-promo.css'); */
+@import url('./header.css');
 @import url('./football.css');
 @import url('./largest-num.css');
 @import url('./scientists.css');
@@ -60,6 +61,20 @@
 *::before{
   box-sizing: border-box;
 }
+body {
+  width: 1440px;
+    margin: 0 auto;
+    background-image: url("../img/body-bgc.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section{
+  background-color: white;
+  width: 1090px !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
 .container {
   width: 1090px;
   padding-left: 10px;
@@ -68,6 +83,14 @@
 }
 
 /* typography */
+.main-title {
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 24px;
+color: #000;
+text-align: center;
+margin: 36px 0 0;
+}
 .title {
     margin-bottom: 36px;
     font-family: var(--font-family);
@@ -84,7 +107,7 @@
     margin: 0 auto 36px;
     background-color: var(--primary-color);
 }
-section {
-  padding-top: 36px;
-  padding-bottom: 36px;
+section:nth-child(odd){
+  padding-top: 36px !important;
+  padding-bottom: 36px !important;
 }

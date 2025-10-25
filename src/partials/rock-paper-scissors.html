@@ -1,0 +1,94 @@
+<section id="rock-paper-scissors" class="rps-section">
+  <h1>Камінь - Ножиці - Папір</h1>
+<div class="rock-box">
+  <div class="buttons">
+    <button class="rock-button" onclick="play('камінь')">
+      <img class="rock-img" src="../img/rock.jpg" alt="Камінь">
+    </button>
+    <button class="rock-button" onclick="play('ножиці')">
+      <img class="rock-img" src="../img/scissors.jpg" alt="Ножиці">
+    </button>
+    <button class="rock-button" onclick="play('папір')">
+      <img class="rock-img" src="../img/paper.jpg" alt="Папір">
+    </button>
+    
+  </div>
+  <p id="rock-result">Зроби свій вибір</p>
+  </div>
+
+  
+
+  <style>
+    .rps-section {
+      text-align: center;
+      background-color: white;
+      color: #222;
+      padding: 40px 0;
+      font-family: Arial, sans-serif;
+    }
+.rock-box {
+/* display: flex; */
+flex-direction: row;
+}
+    .buttons {
+      /* display: flex; */
+      /* flex-direction: row; */
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .rock-button {
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .rock-button:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    .rock-img {
+      width: 60px;
+      filter: invert(1);
+    }
+
+    #rock-result {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    // я вчуся тільки 1.5 року в GoTeens :)
+    const choices = ['камінь', 'ножиці', 'папір'];
+
+    function play(playerChoice) {
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+      let result = "";
+
+      // перевірка хто виграв
+      if (playerChoice === computerChoice) {
+        result = "Нічия";
+      } else if (
+        (playerChoice === "камінь" && computerChoice === "ножиці") 
+        (playerChoice === "ножиці" && computerChoice === "папір") 
+        (playerChoice === "папір" && computerChoice === "камінь")
+      ) {
+        result = "Ти виграла!";
+      } else {
+        result = "Ти програла";
+      }
+
+      document.getElementById("rock-result").textContent =
+        "Твій вибір: " + playerChoice + ", Комп’ютер: " + computerChoice + " → " + result;
+    }
+  </script>
+</section>

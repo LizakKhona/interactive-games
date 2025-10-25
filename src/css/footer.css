@@ -3,6 +3,10 @@ footer{
   padding-top: 61px;
   padding-bottom: 61px;
 }
+.footer-logo {
+  background-color: white;
+  border-radius: 15px;
+}
 .ul-form{
   display: flex;
   column-gap: 187px;
